@@ -1,0 +1,25 @@
+{
+  "name": "mernstack",
+  "version": "1.0.0",
+  "description": "MERN shopping website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmiraliAkhavan/mernstack.git"
+  },
+  "author": "Amirali Akhavan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmiraliAkhavan/mernstack/issues"
+  },
+  "homepage": "https://github.com/AmiraliAkhavan/mernstack#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
