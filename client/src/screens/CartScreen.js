@@ -43,10 +43,13 @@ const Cartscreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1 className="font-fa">سبد خرید</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to="/">Go Back</Link>
+            سبد خرید شما خالی است{" "}
+            <Link to="/" className="font-fa">
+              بازگشت به صفحه اصلی
+            </Link>
           </Message>
         ) : (
           <ListGroup variant="flush">
@@ -106,9 +109,9 @@ const Cartscreen = ({ match, location, history }) => {
         <Card>
           <ListGroup variant="flush">
             <ListGroupItem>
-              <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+              <h2 className="font-fa">
+                تعداد مجموع (
+                {cartItems.reduce((acc, item) => acc + item.qty, 0)}) کالا
               </h2>
               $
               {cartItems
@@ -122,7 +125,7 @@ const Cartscreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed to Checkout
+                پرداخت
               </Button>
             </ListGroupItem>
           </ListGroup>

@@ -32,9 +32,9 @@ const ProductScreen = ({ match, history }) => {
   }, [dispatch, match]);
 
   return (
-    <>
+    <div className="font-fa">
       <Link className="btn btn-dark my-3 rounded" to="/">
-        Go Back
+        بازگشت
       </Link>
       {loading ? (
         <Loader />
@@ -62,10 +62,8 @@ const ProductScreen = ({ match, history }) => {
                   text={`${product.numReviews} Reviews`}
                 />
               </ListGroupItem>
-              <ListGroupItem>Price: {product.price}</ListGroupItem>
-              <ListGroupItem>
-                Product description: {product.description}
-              </ListGroupItem>
+              <ListGroupItem>قیمت: {product.price}</ListGroupItem>
+              <ListGroupItem>توضیحات: {product.description}</ListGroupItem>
             </ListGroup>
           </Col>
           <Col md={3}>
@@ -73,7 +71,7 @@ const ProductScreen = ({ match, history }) => {
               <ListGroup>
                 <ListGroupItem>
                   <Row>
-                    <Col>Price:</Col>
+                    <Col>قیمت:</Col>
                     <Col>
                       <strong>{product.price}</strong>
                     </Col>
@@ -81,16 +79,14 @@ const ProductScreen = ({ match, history }) => {
                 </ListGroupItem>
                 <ListGroupItem>
                   <Row>
-                    <Col>Status:</Col>
-                    <Col>
-                      {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
-                    </Col>
+                    <Col>وضعیت:</Col>
+                    <Col>{product.countInStock > 0 ? "موجود" : "ناموجود"}</Col>
                   </Row>
                 </ListGroupItem>
                 {product.countInStock > 0 && (
                   <ListGroupItem>
                     <Row>
-                      <Col>QTY</Col>
+                      <Col>تعداد</Col>
                       <Col>
                         <FormControl
                           as="select"
@@ -114,7 +110,7 @@ const ProductScreen = ({ match, history }) => {
                     type="button"
                     disabled={product.countInStock === 0}
                   >
-                    Add to Cart
+                    اضافه به سبد خرید
                   </Button>
                 </ListGroupItem>
               </ListGroup>
@@ -122,7 +118,7 @@ const ProductScreen = ({ match, history }) => {
           </Col>
         </Row>
       )}
-    </>
+    </div>
   );
 };
 

@@ -6,6 +6,8 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { Row, Col } from "react-bootstrap";
 import { listProducts } from "../actions/productActions";
+import Carousel from "../components/Carousel";
+import slides from "../components/productsSet";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -19,7 +21,8 @@ const HomeScreen = () => {
 
   return (
     <>
-      <h1>Latest Products</h1>
+      <Carousel slides={slides} />
+      <h1 className="font-fa">آخرین محصولات</h1>
       {loading ? (
         <Loader />
       ) : error ? (

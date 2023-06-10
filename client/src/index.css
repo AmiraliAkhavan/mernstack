@@ -1,3 +1,8 @@
+.font-fa {
+  font-family: 'Lalezar', cursive;
+  font-weight: lighter;
+}
+
 main {
   min-height: 80vh;
 }
