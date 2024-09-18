@@ -1,6 +1,18 @@
+@font-face {
+  font-family: "Dana";
+  src: url("../fonts/Dana-Regular.ttf") format("truetype"),
+    url("../fonts/Dana-Regular.woff") format("woff"),
+    url("../fonts/Dana-Regular.woff2") format("woff2");
+  /* font-display: swap; */
+}
+
 .font-fa {
-  font-family: 'Lalezar', cursive;
+  /* font-family: "Dana", sans-serif; */
   font-weight: lighter;
+}
+
+body {
+  font-family: "Dana";
 }
 
 main {
